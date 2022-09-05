@@ -429,6 +429,7 @@ bool LaserScanMatcher::processScan(LDP& curr_ldp_scan, const rclcpp::Time& time)
       prev_ldp_scan_ = curr_ldp_scan;
     corr_ch.setIdentity();
     RCLCPP_WARN(get_logger(),"Error in scan matching");
+    prev_ldp_scan_ = curr_ldp_scan;
     return false;
   }
 
